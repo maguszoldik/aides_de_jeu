@@ -1,0 +1,151 @@
+% Appuyez sur la touche [F1] pour compiler ce document
+
+\documentclass[10pt, a4paper]{article}	% Format de page
+\usepackage[utf8]{inputenc}				% Pour les caractères accentués
+\usepackage[T1]{fontenc}				% Encodage de caractères
+\usepackage{lmodern}					% Police vectorielle Latin Modern
+\usepackage[frenchb]{babel}				% Règles typographiques françaises
+%\usepackage{graphicx}					% Insérer des images
+\usepackage{multicol}					% Utiliser plusieurs colonnes
+\usepackage{xcolor}						% pour utiliser des couleurs
+\usepackage{amssymb}					% symboles mathématiques
+
+\usepackage{geometry}
+\geometry{a4paper, landscape, top=0.7cm, bottom=1cm, left=1cm, right=1cm}
+
+
+
+\begin{document}
+
+
+{\LARGE \textbf{\textit{La Gloire de Rome}}}
+{\large - Aide de jeu - v1.0}\textit{ -- par Nicolas PENCREACH --}
+
+\setlength{\columnseprule}{0.002cm}	% épaisseur des traits de séparation de colonne
+\begin{multicols}{3}				% écrire le contenu sur 3 colonnes
+
+
+% ####################################
+\section{But du jeu}
+Gagner le plus de points de victoire en construisant des bâtiments et en vendant des matériaux de construction.
+
+
+
+% ####################################
+\section{Préparation}
+\begin{itemize}
+\item Replacer les Cirques et Forum à fond rouge (= alternatives) dans la boîte OU les utiliser comme alternatives aux originaux.
+\item Une carte \og Rome Exige\fg{} est nécessaire au centre de la table, les autres peuvent servir d'aide mémoire.
+\item Les cartes Commande sont mélangées en une pioche.
+\item Chaque joueur prend un plateau + 4 cartes Commande et 1 Sénateur (dans la main).
+\item Les autres Sénateurs sont placés en pile face visible.
+\item Former 2 piles pour chaque type de chantier :
+	\begin{itemize}
+	\item Une pile face visible avec N cartes facilement comptables, N = Nb joueurs (3 conseillé pour 2 joueurs) $\Rightarrow$ \textbf{chantiers urbains}.
+	\item Le reste face cachée $\Rightarrow$ \textbf{chantiers hors ville}.
+	\end{itemize}
+\item Chaque joueur pioche une carte Commande et la dévoile : le 1\ier{} en ordre alphabétique devient 1\ier{} joueur. On retire des cartes en cas d'égalité. Toutes ces cartes sont placées dans le \textbf{lot commun} face visible au centre de la table.
+\end{itemize}
+
+
+
+% ####################################
+\section{Déroulement d'un tour}
+\subsection{Première étape}
+Le joueur actif est appelé Chef (symbolisé par le pion).
+Il choisi entre \textbf{penser} ou \textbf{mener un rôle}.
+
+S'il choisit de \textbf{penser}, le tour s'arrête immédiatement après qu'il ait pensé. Les autres joueurs ne font rien et le pion \og Chef \fg{} passe au joueur de gauche.
+
+Sinon il pose une carte Commande face visible en tant que \textbf{rôle} (colonne de gauche sur la carte).\\
+Un Sénateur peut être posé à la place OU 2 cartes Commande d'un même rôle qui fonctionnent alors comme un Sénateur (rôle au choix).
+
+\vspace{0.1cm}
+Les autres joueurs, en sens horaire, décident alors entre \textbf{penser}, auquel cas le joueur réalise immédiatement cette action, OU \textbf{suivre le rôle}.
+Pour cela il doit poser une carte face visible du même rôle que le chef (ou un Sénateur ou 2 Commandes d'un même rôle).
+
+\subsection{Deuxième étape (Chef n'a pas pensé)}
+Chaque joueur y compris ceux ayant pensé, en commençant par le chef et en sens horaire, effectue alors toutes ses actions : 1 action pour avoir \textbf{mené} ou \textbf{suivi} + 1 action par client disposant du rôle.
+
+\vspace{0.1cm}
+Quand tous les joueurs ont terminé leurs actions, les cartes jouées partent dans le lot commun et le Chef passe au joueur de gauche.
+
+\textbf{Note :} Les Sénateurs vont dans leur pile dédiée, pas dans le lot commun.
+
+
+
+% ####################################
+\section{Actions possibles}
+Les différents rôles (actions possibles) sont décrits brièvement sur le plateau.\\
+Quelques compléments d'information sont indiqués ci-après.
+
+\textbf{Important :} Ne pas oublier que le \textbf{lot commun} n'est ré-alimenté qu'à la toute fin du tour !
+
+\subsection{Penser (Philosophe)}
+La limite de cartes en main est de 5 par défaut.
+
+\subsection{Rôle : Patron}
+Le nombre de clients est limité par l'influence.
+
+\subsection{Rôle : Ouvrier}
+\textit{Rien à ajouter.}
+
+\subsection{Rôles : Architecte et Artisan}
+\begin{itemize}
+\item Le chantier pour poser les fondations proviennent des \textbf{chantiers urbains}.
+\item Pour 2 actions on peut prendre un \textbf{chantier hors ville} à la place.
+\item On ne peut pas posséder 2 chantiers/bâtiments du même nom.
+\item À condition d'avoir suffisamment d'actions, il est possible d'ajouter des matériaux à des fondations qui viennent d'être posées ou d'entretenir plusieurs chantiers.
+\item Une fois le bâtiment construit, les matériaux sont retirés de la partie et le chantier est placé sous le plateau, pièces visibles. Cela augmente d'autant l'influence du joueur. L'effet du bâtiment et l'influence sont immédiatement actifs.
+\end{itemize}
+
+\subsection{Rôle : Légionnaire}
+Le fonctionnement pour exiger une/des ressource(s) est indiqué sur la carte \og Rome exige ... \fg{}. Seule la/les ressource(s) demandée(s) doit/doivent être visible(s).
+
+\subsection{Rôle : Marchand}
+\begin{itemize}
+\item Le nombre de cartes dans la chambre forte est limité par l'influence.
+\item La valeur sur la carte (pièces) compte comme point de victoire en fin de partie.
+\item Les cartes placées dans la chambre forte n'ont plus le droit d'être vues \textbf{par qui que ce soit}.
+\end{itemize}
+
+
+
+
+% ####################################
+\section{Fin de la partie}
+La partie se termine \textbf{immédiatement} (toute action restante est perdue) si l'un des cas suivant intervient :
+\begin{itemize}
+\item Il n'y a plus de carte Commande dans la pioche.
+\item Un joueur place des fondations sur la dernière carte du \textbf{chantier urbain}.
+\item Tous les joueurs abdiquent en faveur d'un joueur.
+\item Une carte Catacombes est terminée.
+\item Un Forum et ses conditions sont terminés.
+\end{itemize}
+
+
+
+% ####################################
+\section{Décompte des points}
+Si la partie est terminée avec le Forum, pas besoin de compter les points.
+
+Sinon on ajoute les points suivants
+\begin{itemize}
+\item 1 pt de victoire par point d'influence.
+\item Pts des matériaux placés dans le coffre fort.
+\item Pour chaque type de matériaux placé dans le coffre fort, 3 pts bonus si le joueur en a le plus grand nombre (pas de bonus en cas d'égalité).
+\item La Statue et la Muraille rapportent des points.
+\end{itemize}
+
+
+
+% ####################################
+\section{Conseils et alternatives}
+\begin{itemize}
+\item Pour une partie d'initiation, il est recommandé d'utiliser un maximum de 3 chantiers urbains de chaque type, de retirer la moitié des Commande de la pioche et d'ignorer les fonctions des bâtiments (ne donnent que des points d'influence).
+\item Les joueurs expérimentés peuvent commencer avec 5 cartes Commande + 1 Sénateur. Ils choisissent une carte et la pose face cachée devant eux puis tout le monde retourne en même temps. Cette carte détermine qui sera le 1\ier{} joueur (ordre alphabétique) et va dans le lot commun.
+\end{itemize}
+
+
+\end{multicols}
+\end{document}
