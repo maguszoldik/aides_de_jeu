@@ -1,0 +1,180 @@
+% Appuyez sur la touche [F1] pour compiler ce document
+
+\documentclass[10pt, a4paper]{article}	% Format de page
+\usepackage[utf8]{inputenc}				% Pour les caractères accentués
+\usepackage[T1]{fontenc}				% Encodage de caractères
+\usepackage{lmodern}					% Police vectorielle Latin Modern
+\usepackage[frenchb]{babel}				% Règles typographiques françaises
+%\usepackage{graphicx}					% Insérer des images
+\usepackage{multicol}					% Utiliser plusieurs colonnes
+\usepackage{xcolor}						% pour utiliser des couleurs
+\usepackage{amssymb}					% symboles mathématiques
+
+\usepackage{geometry}
+\geometry{a4paper, landscape, top=0.7cm, bottom=0.7cm, left=1cm, right=1cm}
+
+
+
+\begin{document}
+
+
+{\LARGE \textbf{\textit{Olympos}}}
+{\large - Aide de jeu - v1.0}\textit{ -- par Nicolas PENCREACH --}
+
+\setlength{\columnseprule}{0.002cm}	% épaisseur des traits de séparation de colonne
+\begin{multicols}{3}				% écrire le contenu sur 3 colonnes
+
+% ####################################
+\section{But du jeu}
+Les joueurs colonisent la Grèce et ses environs.
+En gagnant des territoires et des ressources ils pourront accéder à des découvertes et ainsi construire la plus prestigieuse civilisation.
+
+
+% ####################################
+\section{Préparation}
+
+\begin{itemize}
+\item Ne garder que les tuiles découvertes correspondant au nb de joueurs (dos sans numéro et num $\leq$ nb joueurs).
+\item Grouper les tuiles identiques (même dessin).
+\item Placer aléatoirement les tuiles sur les lignes de leur couleur.
+\item Chaque joueur reçoit 4 jetons à sa couleur, représentant son \textbf{stock} de \textbf{colons}.
+\item Prendre un 5ème jeton pour chaque joueur et faire une pile sur la première case de la piste de temps (aléatoirement).
+\item Le plus en bas de la pile (dernier joueur), prend \textbf{X} jeton(s) \og territoire\fg{} de chaque type et condamne autant de territoires correspondants (même type) en y posant le jeton retourné (croix visible).
+	\begin{itemize}
+	\item $\textbf{X} = 1/2/3$ pour respectivement $5/4/3$ joueurs.
+	\item \textbf{On ne peut pas condamner 2 territoires étoilés d'un même type.}
+	\item Condamner des territoires étoilés influe sur la difficulté à bâtir des merveilles.
+	\end{itemize}
+\item Placer un jeton \og Peuplade\fg{} sur chaque territoire étoilé non condamné.
+\item Prendre 4 cubes \og ressource\fg{} différents [+1 aléatoire à 5] et en donner aléatoirement un à chaque joueur.
+\item Mélanger les cartes Destin et les cartes Olympos en 2 piles.
+\item Retirer de la partie une carte Olympos face cachée.
+\end{itemize}
+
+
+
+% ####################################
+\section{Déroulement de la partie}
+
+\begin{itemize}
+\item C'est toujours au dernier joueur sur la piste de temps de jouer.
+\item Si 2$+$ joueurs sont en dernière position, c'est au joueur dont le pion est au dessus de jouer.
+\item Le joueur réalise une action (Expansion ou Développement).
+\item Une fois l'action réalisée, le joueur avance son pion sur l'échelle de temps (le nombre de cases dépend de l'action).
+\item Le coût d'une action peut être diminué en utilisant des jetons \og Sablier\fg{}. \textbf{Si le joueur possède des sabliers, il doit les utiliser en priorité avant d'avancer son pion.}
+\end{itemize}
+
+\subsection{Action : Expansion}
+Cette action consiste à déplacer un colon depuis le plateau ou le stock vers un territoire. Le paiement de toute l'action se fait une fois le déplacement entièrement réalisé.
+
+
+\vspace{0.1cm}
+\textbf{Départ}
+\begin{itemize}
+\item Nouveau colon : un déplacement depuis le stock coûte 2tps. Le colon arrive alors soit par la zone Nord, soit par un territoire conquis.
+\item Quitter un territoire que l'on contrôle fait perdre les jetons correspondants (remis en réserve/sur la case ou passé à un autre joueur occupant la case).
+\end{itemize}
+
+\vspace{0.1cm}
+\textbf{Déplacement}
+\begin{itemize}
+\item On peut se déplacer d'autant de cases que souhaité (1 case minimum), en traversant n'importe quelle case (libre, occupée ou condamnée), sauf la zone Nord, sans surcoût.
+\item 1 case de terre coûte 1tps.
+\item 1 case de mer coûte 2tps.
+\end{itemize}
+
+\vspace{0.1cm}
+\textbf{Arrivée}
+\begin{itemize}
+\item \textbf{On ne peut pas s'arrêter dans un territoire condamné (croix).}
+\item Quand on s'arrête sur un territoire, on en prend automatiquement le contrôle.
+\item Si on s'arrête sur le territoire Olympos ou une étoilé, on prend le jeton.
+\item Si le territoire était vide, on prend un jeton correspondant dans la réserve.
+\item Si le territoire est occupé par un joueur :
+	\begin{itemize}
+	\item Il y a un combat, remporté automatiquement.
+	\item \textbf{Coûte 1/2/3 tps si respectivement $+$/$=$/$-$ d'épées.}
+	\item Le pion arrivant est placé sur celui déjà présent.
+	\item Le contrôle passe au nouvel arrivant, qui reçoit le jeton territoire du \og vaincu\fg{} et l'éventuel jeton Zeus ou étoile de la case.
+	\item \textbf{Le vaincu prend un jeton sablier dans la réserve.}
+	\item Le vaincu peut rester sur le territoire tant qu'il veut mais devra le quitter puis revenir et combattre s'il veut en reprendre le contrôle, à moins que l'autre joueur ne le quitte de lui même.\textbf{ Tant qu'il ne contrôle pas le territoire il ne peut pas y faire venir de nouveaux colons.}
+	\end{itemize}
+\item Si le territoire est occupé par une Peuplade, il y a un combat comme avec un joueur et donc un coût en tps (Peuplade = 0 épée).
+\textbf{La Peuplade est transformée en étoile et le restera jusqu'à la fin de la partie.}
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{Coût de l'action $=$ nouveau colon $+$ déplacement $+$ combat.}
+
+
+
+\subsection{Action : Développement}
+Cette action consiste à acheter une tuile de la plaque de développements, contre \textbf{7tps} à la fin de l'action.
+
+\vspace{0.1cm}
+\textbf{Découvertes}
+\begin{itemize}
+\item Payables en territoire et/ou cube (ressource).
+\item Les territoires restent devant le joueur.
+\item Les cubes sont défaussés.
+\item Les \og $+$\fg{} dans le prix indiquent que les X ressources doivent être \textbf{d'un type} différent des précédents.
+\item Le joueur prend la tuile (au choix si plusieurs).
+\item Le joueur prend un jeton \textbf{de la réserve} qu'il place sur le bonus de son choix, immédiatement résolu. \textbf{Le fond gris est réservé pour les parties à 5.}
+\item \textbf{Il est interdit de prendre 2 fois la même découverte.}
+\end{itemize}
+
+
+\vspace{0.1cm}
+\textbf{Merveilles}\\
+Le joueur doit disposer du nombre d'étoiles indiqué dessus. Ces étoiles sont
+procurées par
+\begin{itemize}
+\item Les jetons étoile gagnés lors de la prise d'un territoire.
+\item Certaines cartes Destin et Olympos.
+\item Les découvertes Architecture et Ingénierie.
+\item Chaque jeton bonus situé \textbf{dans la même colonne} que la merveille.
+\end{itemize}
+
+
+\subsection{Cases Zeus}
+\textbf{Cartes Destin}\\
+Dès qu'un joueur atteint ou franchi une case Zeus, il pioche une carte Destin qu'il peut jouer immédiatement ou à n'importe quel moment de son tour.
+
+\vspace{0.1cm}
+\textbf{Carte Olympos}
+\begin{itemize}
+\item Le \textbf{premier joueur} à atteindre une case Zeus déclenche le tirage d'une carte Olympos après avoir reçu sa carte de Destin.
+\item Si un deuxième symbole Zeus est présent sur la case, une seconde carte est tirée quand le \textbf{dernier joueur} atteint à son tour la case.
+\item La moitié des effets est positif, l'autre négatif.
+\item Les effets positifs touchent ceux ayant le plus de points Zeus (\textbf{1 minimum}).
+\item Les effets négatifs touchent les joueurs en ayant le moins.
+\end{itemize}
+
+
+\subsection{Fin du jeu}
+Une fois qu'un joueur dépasse la dernière case Zeus, il peut décider de soit \textbf{passer}, soit \textbf{effectuer une dernière action},
+sans dépasser la croix en coût de tps.\\
+Une fois celà fait, il a fini de jouer.\\
+La partie prend fin quand tous les joueurs se retrouvent dans cette situation.
+
+
+% ####################################
+\section{Décompte des points}
+\begin{itemize}
+\item Points de la piste de temps
+\item Points des jetons Prestige
+\item 1pt/territoire normal sous contrôle
+\item \textbf{2pts/territoire Atlantide sous contrôle}
+\item 2pts/tuile découverte
+\item Points des Découvertes
+\item Points des Merveilles
+\item La carte \og Kères\fg{} fait perdre 2pts à ses victimes
+\item \textbf{1pt/carte Destin encore en main}
+\end{itemize}
+
+En cas d'égalité, le max de tuiles découverte + merveille l'emporte.
+
+
+
+\end{multicols}
+\end{document}
