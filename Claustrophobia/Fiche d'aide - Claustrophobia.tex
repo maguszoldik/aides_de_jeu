@@ -1,0 +1,166 @@
+% Appuyez sur la touche [F1] pour compiler ce document
+
+\documentclass[10pt, a4paper]{article}	% Format de page
+\usepackage[utf8]{inputenc}				% Pour les caractères accentués
+\usepackage[T1]{fontenc}				% Encodage de caractères
+\usepackage{lmodern}					% Police vectorielle Latin Modern
+\usepackage[frenchb]{babel}				% Règles typographiques françaises
+%\usepackage{graphicx}					% Insérer des images
+\usepackage{multicol}					% Utiliser plusieurs colonnes
+\usepackage{xcolor}						% pour utiliser des couleurs
+\usepackage{amssymb}					% symboles mathématiques
+
+\usepackage{geometry}
+\geometry{a4paper, landscape, top=0.7cm, bottom=0.5cm, left=1.5cm, right=1cm}
+
+
+
+\begin{document}
+
+
+{\LARGE \textbf{\textit{Claustrophobia}}}
+{\large - Aide de jeu - v1.0}\textit{ -- par Magus Zoldik --}
+
+\setlength{\columnseprule}{0.002cm}	% épaisseur des traits de séparation de colonne
+\begin{multicols}{3}				% écrire le contenu sur 3 colonnes
+
+% ####################################
+\section{Préparation de la partie}
+
+\begin{itemize}
+\item Choisir un scénario (p16 et plus), qui défini la mise en place, condition de victoire et règles spéciales.
+\item Les règles spéciales du scénario prédominent toujours sur les règles standard.
+\item Les cartes d'avantage de l'humain peuvent être jouées au moment indiqué puis défaussées. Elles ne seront pas repiochées en cours de partie.
+\item Les objets sont intimement liés à son possesseur : pas de transmission, perte si mort, \dots
+\end{itemize}
+
+
+
+% ####################################
+\section{Déroulement de la partie}
+
+On joue des tours tant que les conditions de victoire ne sont pas remplies. Un tour se déroule comme suit.
+
+\subsection{Phase d'initiative [joueur Humain]}
+\begin{itemize}
+\item Lancer un D6 par humain en vie.
+\item Associer chaque dé à un humain $\Rightarrow$ indique les caracs du perso jusqu'au prochain tour et les dons actifs pour le frère rédempteur.
+\item Une ligne annulée vaut DPT 0, CBT 0, DEF 3.
+\item Une ligne annulée empêche l'utilisation des \underline{dons, talents et objets} (sauf \og Sceptre de commandement\fg)
+\end{itemize}
+
+
+\subsection{Phase d'action des Humains}
+\begin{itemize}
+\item Chaque personnage est activé successivement et complètement.
+\item Lors de son activation, un perso peut :
+\begin{itemize}
+\item \underline{soit} ne rien faire
+\item \underline{soit} se déplacer puis combattre
+\item \underline{soit} combattre puis se déplacer
+\end{itemize}
+\end{itemize}
+
+
+
+\subsection{Phase de Menace [joueur Démon]}
+\begin{itemize}
+\item Lancer \textbf{3D6} (ou plus si une action/carte le permet).
+\item Répartir les dés dans les cases \og destinés\fg{} à sa convenance, en respectant la condition marquée.
+\item Les cases à texte \textcolor{red}{\textbf{rouge}} ne peuvent être sélectionnées qu'une seule fois par tour. Pas de condition sur les \textbf{noires}.
+\item Les cartes d'évènements peuvent être conservées sans limite et jouées suivant leur texte, puis défaussées.
+\item Les effets sont résolus.
+\item Faire entrer des bestioles sur \underline{une ou plusieurs} tuiles :
+\begin{itemize}
+	\item Coût de 1PM/troglo, 5PM pour un démon (cf. scénario pour ses caracs)
+	\item La tuile doit être vide d'humain et comporter au moins une issue non explorée.
+	\item Respecter la règle d'encombrement des couloirs.
+\end{itemize}
+\end{itemize}
+
+
+\subsection{Phase d'action du démon}
+Idem que pour les actions des humains, mais ne peut pas faire d'exploration.
+
+
+
+
+
+% ####################################
+\section{Actions}
+
+\subsection{Déplacement}
+\begin{itemize}
+\item Le déplacement est facultatif.
+\item Aller sur une tuile adjacente coûte 1 DPT.
+\item On doit respecter 2 règles :
+\begin{enumerate}
+	\item \textbf{Règle d'encombrement des couloirs :} pas plus de 3 combattants de son camp/tuile.
+	\item \textbf{Règle de blocage :} on peut quitter une tuile \underline{seulement si} nb de combattants de son camp $\geqslant$ nb de combattants du camp adverse.
+\end{enumerate}
+\end{itemize}
+
+
+\subsection{Exploration}
+Un déplacement peut être fait vers une issue inexplorée (1 DPT). On suit alors cette procédure :
+\begin{itemize}
+\item L'humain pioche la 1\iere{} tuile et la donne au démon.
+\item Le démon la place dans le sens qu'il veut, du moment qu'elle soit accessible.
+\item L'humain est placé sur la nouvelle tuile.
+\item Les effets de la tuile se déclenchent s'il y a lieu, cf. détail au dos du livret de règle.
+\item L'humain peut continuer ses déplacements.
+\item \textbf{Cul de sac :} s'il ne reste \underline{aucune} issue non explorée, la dernière tuile est défaussée et on en pioche une nouvelle à la place.
+\end{itemize}
+
+
+\subsection{Combat}
+\begin{itemize}
+\item L'attaquant indique qui sera la cible.
+\item Les troglo comptent pour une seule et même cible.
+\item Lance autant de dés que son score de Combat (CBT).
+\item \textbf{La DEF de la cible, même avec bonus, ne peut jamais dépasser 6.}
+\item Si $Dé\geqslant DEF$ de la cible $\Rightarrow$ 1 touche.
+\item Le joueur touché réparti les touches. Pour chacune :
+\begin{itemize}
+	\item Si troglo $\Rightarrow$ 1 troglo mort (1PV).
+	\item Si Démon, 1 marqueur de blessure sur sa carte, jusqu'à atteindre son nombre de PV (puis mort).
+	\item Si humain, 1 ligne est annulée. Si elles sont toutes annulées $\Rightarrow$ mort.
+\end{itemize}
+\end{itemize}
+
+
+
+% ####################################
+\section{Talents}
+Les combattants peuvent avoir des traits ou talents.
+
+\textbf{Insaisissable :}
+ignore la \textbf{règle de blocage}.
+
+\textbf{Frénétique :}
+relance 1x les dés qui n'ont pas touché.
+
+\textbf{Garde du corps :}
+\underline{peut} prendre les touches \underline{d'attaque} faites sur un allié de la même tuile à sa place.
+
+\textbf{Imposant :}
+\begin{itemize}
+\item Empêche les adversaires de quitter la tuile (sauf sur la tuile \og Trou dans le sol\fg ).
+\item Annule le talent \og Insaisissable\fg{}  $\Rightarrow$ La règle normale de blocage s'applique alors.
+\end{itemize}
+
+\textbf{Sanctifié :}
+\begin{itemize}
+\item Utilisable lors de la \underline{phase d'initiative}, \textbf{après le placement des dés}.
+\item Désigne un combattant.
+\item Celui-ci gagne un bonnus de +1DPT \underline{ou} +2CBT, \underline{jusqu'à la fin de la prochaine phase d'action}.
+\item Si la ligne d'action du combattant était annulée, elle est immédiatement guérie.
+\item \textbf{Ne peut être utilisé qu'une fois par scénario.}
+\end{itemize}
+
+
+\section{Handicaps \& Experts}
+Une section \og Handicap\fg{} (équilibre entre 2 joueurs) et une autre \og Scénarios pour joueurs expérimentés\fg{} (introduit une mise en place différente) sont présentes en p15.
+
+\end{multicols}
+\end{document}
