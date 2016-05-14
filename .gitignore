@@ -1,3 +1,9 @@
-*.aux
-*.log
-*.synctex.gz
+*
+
+!/README.md
+!/LICENSE
+!.gitignore
+
+!*.pdf
+!*.tex
+
