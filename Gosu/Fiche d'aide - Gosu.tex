@@ -1,15 +1,17 @@
+% !TeX encoding = UTF-8
+
 \documentclass[10pt, a4paper]{article}	% Format de page
-\usepackage[utf8]{inputenc}			% Pour les caractères accentués
+\usepackage[utf8]{inputenc}				% Pour les caractères accentués
 \usepackage[T1]{fontenc}				% Encodage de caractères
-\usepackage{lmodern}				% Police vectorielle Latin Modern
-\usepackage[french]{babel}			% Règles typographiques françaises
-%\usepackage{graphicx}				% Insérer des images
-\usepackage{multicol}				% Utiliser plusieurs colonnes
-\usepackage{xcolor}					% pour utiliser des couleurs
-\usepackage{amssymb}				% symboles mathématiques
+\usepackage{lmodern}					% Police vectorielle Latin Modern
+\usepackage[french]{babel}				% Règles typographiques françaises
+%\usepackage{graphicx}					% Insérer des images
+\usepackage{multicol}					% Utiliser plusieurs colonnes
+\usepackage[usenames,dvipsnames]{xcolor} % pour utiliser des couleurs https://en.wikibooks.org/wiki/LaTeX/Colors
+\usepackage{amssymb}					% symboles mathématiques
 
 \usepackage{geometry}
-\geometry{a4paper, landscape, top=0.7cm, bottom=0.5cm, left=1.5cm, right=1cm}
+\geometry{a4paper, landscape, top=0.7cm, bottom=0.8cm, left=1.5cm, right=1cm}
 
 \frenchbsetup{og = «, fg = »}		% remplace automatiquement les guillemets
 \frenchbsetup{ItemLabelii=\textbullet}	% redéfini le style des listes de niveau 2
@@ -77,33 +79,37 @@
 \DeclareUnicodeCharacter{2020}{\ensuremath{\dagger}}
 \DeclareUnicodeCharacter{2021}{\ensuremath{\ddagger}}
 \DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+\DeclareUnicodeCharacter{2260}{\ensuremath{\neq}}
 
 
 \begin{document}
 
 % En-tête du document
 {\LARGE \textbf{\textit{Gosu}}}
-{\large - Aide de jeu - v1.0}\textit{ — par Nicolas PENCREACH —}
+{\large - Aide de jeu - v2.0}\textit{ — par Nicolas PENCREACH —}
 
-\setlength{\columnseprule}{0.002cm}	% épaisseur des traits de séparation de colonne
+\setlength{\columnseprule}{0.004cm}	% épaisseur des traits de séparation de colonne
 \begin{multicols}{3}				% écrire le contenu sur 3 colonnes
+
+\textcolor{Plum}{[Ajout/modification lié à l’extension Kamakor.]}
 
 % #################################
 \section{Présentation}
 \label{sec:presentation}
 
 \begin{itemize}
-\item 100 cartes de gobelins
-\item 5 couleurs
-\item 3 niveaux (types) :
+	\item 100 cartes de gobelins
+	\item 5 clans (= couleurs/symboles)
+	\item 3 types/niveaux dans chaque :
 	\begin{itemize}
-	\item I   — 50 Bakutos (25 doubles)
-	\item II  — 35 Héros (uniques)
-	\item III — 15 Ozekis (uniques)
+		\item I   — 50 Bakutos (25 doubles)
+		\item II  — 35 Héros (uniques)
+		\item III — 15 Ozekis (uniques)
 	\end{itemize}
 \end{itemize}
 
-But : construire la plus grande armée et accumuler 3 points de victoire \textbf{OU} remplir une condition de victoire alternative d’un Ozeki
+
+But : construire la plus grande armée et accumuler 3 points de victoire \textbf{OU} remplir une condition de victoire alternative d’un Ozeki.
 
 
 % #################################
@@ -111,10 +117,11 @@ But : construire la plus grande armée et accumuler 3 points de victoire \textbf
 \label{sec:preparation}
 
 \begin{itemize}
-\item Mélanger les cartes en une pile.
-\item Distribuer 2 jetons d’activation à chacun.
-\item Définir au hasard qui reçoit le jeton avantage.
-\item Chacun pioche 7 cartes. Si pas de niveau I, peut défausser sa main et repiocher (et ainsi de suite) jusqu’à en avoir au moins un.
+	\item Définir au hasard qui reçoit le jeton avantage.
+	\item \textcolor{Plum}{Chaque joueur élimine un des 10 clans et ainsi de suite pour n’en conserver que 5.}
+	\item Mélanger les cartes en une pile.
+	\item Distribuer 2 jetons d’activation à chacun.
+	\item Chacun pioche 7 cartes. Si pas de niveau I, on peut défausser toute sa main et repiocher (et ainsi de suite) jusqu’à en avoir au moins un.
 \end{itemize}
 
 
@@ -123,63 +130,70 @@ But : construire la plus grande armée et accumuler 3 points de victoire \textbf
 \label{sec:fonctionnement}
 
 \begin{itemize}
-\item Le jeu se déroule en rondes.
-\item Une ronde se découpe en tours et se termine quand tous les joueurs ont passé.
-\item À chaque tour, un joueur peut soit faire une action soit passer, auquel cas il ne joue plus avant la fin de la ronde.
-\\Note : le dernier joueur dans la ronde peut continuer seul tant qu'il le souhaite.
-\item À la fin de la ronde il y a une Grande Bataille. On compte les points de chaque armée et la plus forte gagne un point de victoire.
-\\En cas d'égalité celui avec le jeton avantage gagne le point si présent, sinon tous gagnent un point.
-\item On recommence ensuite une ronde :
+	\item Le jeu se déroule en rondes.
+	\item Une ronde se découpe en tours et se termine quand tous les joueurs ont passé.
+	\item À chaque tour, un joueur peut soit faire une action soit passer, auquel cas il ne joue plus avant la fin de la ronde.
+	\\Note : le dernier joueur dans la ronde peut continuer seul tant qu'il le souhaite.
+	\item À la fin de la ronde il y a une Grande Bataille. On compte les points de chaque armée et la plus forte gagne un point de victoire.
+	\\En cas d'égalité celui avec le jeton avantage gagne le point si présent, sinon tous gagnent un point.
+	\item On recommence ensuite une ronde :
 	\begin{itemize}
-	\item on récupère ses jetons d'activation.
-	\item les cartes emprisonnées sont retournées.
-	\item \textbf{le jeton avantage reste où il est}.
-	\item \textbf{on ne repioche pas de cartes}.
+		\item On récupère ses jetons d'activation.
+		\item Libérer (= retourner) les cartes emprisonnées.
+		\item \textbf{Le jeton avantage reste où il est}.
+		\item \textbf{On ne repioche pas de cartes}.
+		\item \textcolor{Plum}{Les jetons Dragoon joués sur des cartes sont remis dans leur réserve.}
 	\end{itemize}
 \end{itemize}
 
 \vspace{0.2cm}
 Les actions possibles sont :
 \begin{itemize}
-\item poser un gobelin (voir plus loin).
-\item muter un gobelin (voir plus loin).
-\item dépenser un jeton pour piocher une carte.
-\item dépenser 2 jetons pour piocher 3 cartes.
-\item poser 1 jeton sur 1 gobelin pour activer son pouvoir.
-\item (passer son tour.)
+	\item Poser un gobelin (voir plus loin).
+	\item Muter un gobelin (voir plus loin).
+	\item Dépenser un jeton activ. pour piocher une carte.
+	\item Dépenser 2 jetons activ. pour piocher 3 cartes.
+	\item Activer 1 pouvoir avec 1 jeton activ. \textcolor{Plum}{(ou Dragoon)}.
+	\\ \textbf{1 jeton max. par gobelin}.
+	\item Passer son tour. \textcolor{Plum}{Un joueur ne peut pas passer tant qu’il lui reste un jeton d’activation.}
 \end{itemize}
 
 % -----------------------------
 \subsection{Poser un gobelin}
 \begin{itemize}
-\item Les gobelins sont posés depuis la main.
-\item Ils sont posés en ligne suivant leurs niveaux (donc 3 lignes max), de la gauche vers la droite.
-\item 5 par ligne max.
-\item Au niveau I :
+	\item Les gobelins sont posés depuis la main.
+	\item Ils sont posés en ligne suivant leurs niveaux (donc 3 lignes max), de la gauche vers la droite.
+	\item 5 par ligne max.
+	\item Au niveau I :
 	\begin{itemize}
-	\item le premier est toujours gratuit.
-	\item les suivants coûtent 2 cartes à défausser si c'est une nouvelle couleur, gratuit sinon.
+		\item le premier est toujours gratuit.
+		\item les suivants coûtent 2 cartes à défausser si c'est une nouvelle couleur, gratuit sinon.
 	\end{itemize}
-\item Au niveau II :
+	\item Au niveau II :
 	\begin{itemize}
-	\item gratuit mais on ne peux poser qu’une couleur déjà présente au niveau I.
-	\item pas plus de carte qu'au niveau I (pyramide).
+		\item gratuit mais on ne peux poser qu’une couleur déjà présente au niveau I.
+		\item pas plus de carte qu'au niveau I (pyramide).
 	\end{itemize}
-\item Au niveau III :
+	\item Au niveau III :
 	\begin{itemize}
-	\item gratuit mais on ne peux poser qu'une couleur déjà présente au niveau II ET au nideau I.
-	\item pas plus de cartes qu’au niveau II (pyramide).
+		\item gratuit mais on ne peux poser qu'une couleur déjà présente au niveau II \textbf{ET} au niveau I.
+		\item pas plus de cartes qu’au niveau II (pyramide).
 	\end{itemize}
 \end{itemize}
 
 % ----------------------------------
 \subsection{Muter un gobelin}
 \begin{itemize}
-\item S'il y a un nombre à coté du yin-yang alors la carte peut être mutée (= remplacée).
-\item Le nombre indique la quantité de cartes à défausser pour la muter.
-\item On peut muter une carte en n'importe quelle autre de même niveau présente dans sa main, sauf carte identique.
-\item Il est possible de muter dans une couleur non présente dans les niveaux inférieurs.
-\item La mutation zombie, spécifique aux gobelins noirs, permet de muter en un gobelin présent dans la défausse.
+	\item S'il y a un nombre à coté du yin-yang alors la carte peut être mutée (= remplacée).
+	\item Le nombre indique la quantité de cartes à défausser pour la muter.
+	\item On peut muter une carte en n'importe quelle autre de même niveau présente dans sa main, sauf carte identique.
+	\item Il est possible de muter dans une couleur non présente dans les niveaux inférieurs.
+	\item La \textbf{mutation zombie} permet de muter en un gobelin présent dans la défausse.
+	\item \color{Plum} Le \textbf{Shadow Jump} est une forme de mutation particulière. Au lieu de payer un coup en défausse, on retourne la première carte de la pioche : 
+	\begin{itemize}
+		\item Si même niveau $\Rightarrow$ remplacée.
+		\item Sinon la carte est emprisonnée.
+	\end{itemize}
 \end{itemize}
 
 
@@ -187,17 +201,54 @@ Les actions possibles sont :
 \section{Points particuliers}
 \label{sec:points_particuliers}
 \begin{itemize}
-\item Il n'y a pas de limite de carte en main.
-\item La défausse peut être consultée à n'importe quel moment.
-\item La défausse est remélangée à la pioche quand quelqu'un doit piocher et qu'il n'y a plus de carte pour ça.
-\item Sauf mention explicite, les effets peuvent cibler les cartes personnelles et adverses.
-\item Une carte est dite \textbf{LIBRE} si elle n'a pas de carte à droite ou au-dessus d'elle. \\ \textbf{Elles sont les seules qu'on peut détruire.}
-\item Certaines cartes ont un bonus entre parenthèses qui s'applique \textit{uniquement} si un adversaire a plus de points de victoire.
-\item Les Ozekis (niveau III) ont des pouvoirs qui s'appliquent à tous les joueurs, peuvent changer les règles et ajouter des conditions de victoire ; précédé de la mention « global ».
-\item Une carte emprisonnée est retournée : elle n'a alors plus de valeur, pouvoir, ni clan. Elle peut être ciblée comme « libre » et on peut poser au dessus.
-\item Si plusieurs effets arrivent en même temps, le joueur actif choisit l'ordre de résolution mais tous les effets doivent être appliqués et aucun ne peut être annulé à cause de l'ordre de résolution.
-\item Un joueur gagne dès qu'il obtient 3 PV et met fin à la partie sans attendre la fin de la ronde.
+	\item Les Bakutos (niveau I) donnent le nom du clan.
+	\item Il n'y a pas de limite de carte en main.
+	\item La défausse peut être consultée à n'importe quel moment.
+	\item La défausse est remélangée à la pioche quand on doit piocher et qu'il n'y a plus de carte pour ça.
+	\item Sauf mention explicite, les effets peuvent cibler les cartes personnelles et adverses
+	\item Une carte est dite \textbf{LIBRE} si elle n'a pas de carte à droite ou au-dessus d'elle. \\ \textbf{Elles sont les seules qu'on peut détruire.}
+	\item Certaines cartes ont un bonus entre parenthèses qui s'applique \textit{uniquement} si un adversaire a plus de points de victoire.
+	\item Les Ozekis (niveau III) ont des pouvoirs qui s'appliquent à tous les joueurs, peuvent changer les règles et ajouter des conditions de victoire ; précédé de la mention « global ».
+	\item Une carte emprisonnée est retournée : elle n'a alors plus de valeur, pouvoir, ni clan. Elle peut être ciblée comme « libre » et on peut poser au dessus.
+	\item \textcolor{Plum}{L’effet de Kao, Sombre Gobelin de niveau II, ne se déclenche pas si une carte s’emprisonne elle même.}
+	\item \textcolor{Plum}{Certaines cartes peuvent en « libérer » d’autres (retourner face visible).}
+	\item Si plusieurs effets arrivent en même temps, le joueur actif choisit l'ordre de résolution mais tous les effets doivent être appliqués et aucun ne peut être annulé à cause de l'ordre de résolution.
+	\item Un joueur gagne dès qu'il obtient 3 PV et met fin à la partie immédiatement.
+	\item \textcolor{Plum}{Une carte est dite \textbf{première carte} quand elle est placée tout en bas à gauche.}
+	\item \textcolor{Plum}{Une carte \textbf{RECRUTEUR} indique que la carte posée juste à droite (≠ mutée) sera gratuite quelle que soit sa couleur.\\ \textbf{Quand elle est détruite, tous les adversaires piochent une carte.}}
+	\item \textcolor{Plum}{2 jetons Dragoon max. en main + 2 posés max.}
+	\item \textcolor{Plum}{S’il n’y a plus de jeton Dragoon en réserve, on ne peut plus en gagner.}
+	\item \textcolor{Plum}{Certaines cartes peuvent être activées en remplissant l’action inscrite en italique précédée de « : ». Cette activation compte comme une action mais peut-être réalisée plusieurs fois par ronde.}
 \end{itemize}
+
+
+
+% #################################
+\section{Règles optionnelles}
+\label{sec:regles_optionnelles}
+
+Ces règles sont issues des règles de tournoi et présentées dans l’extension Kamakor. Elle peuvent toutefois parfaitement être employées avec le jeu de base.
+
+\subsection*{Draft}
+Une fois les mains de départ reçues, chaque joueur garde 2 cartes et fait passer sa main au voisin de gauche. Puis chacun conserve une carte et fait à nouveau passer son jeu à gauche et ainsi de suite jusqu’à épuisement.
+
+
+\subsection*{Limitation des tours}
+Quand un premier joueur passe, les autres ne peuvent alors plus jouer qu’un maximum de 10 fois \textbf{en tout (≠ chacun)}.\\
+Si un effet de carte donne un tour supplémentaire, ce tour bonus est compté dans les 10.
+Si lors du 10\ieme tour un effet donne un tour supplémentaire, ce tour bonus (et éventuellement les suivants) est joué.
+
+
+\subsection*{Jeu en équipe (2 VS 2)}
+\begin{itemize}
+	\item La victoire se joue en 3 pts \textbf{pour l’équipe}.
+	\item La cible « un joueur » peut désigner son allié.
+	\item La cible « un adversaire » désigne obligatoirement quelqu’un de l’autre camp.
+	\item On peut jouer ses jetons (activation \textcolor{Plum}{et dragoon}) pour son allié afin de le faire piocher ou activer des effets de ses cartes qui seront joués comme s’il avait lui même utilisé un jeton.
+	\item Pour la grande bataille, seule la plus puissante des armées de chaque camp est prise en compte. En cas d’égalité on compare les 2 autres. Si toujours égalité, l’équipe avec l’avantage remporte le point.
+	\item Pour la limitation de tours, la règle des 10 coups s’applique dès que les 2 membres d’une même équipe ont passé.
+\end{itemize}
+
 
 
 
