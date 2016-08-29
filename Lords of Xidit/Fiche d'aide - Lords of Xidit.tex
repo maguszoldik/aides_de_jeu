@@ -1,0 +1,268 @@
+\documentclass[10pt, a4paper]{article}	% Format de page
+\usepackage[utf8]{inputenc}			% Pour les caractères accentués
+\usepackage[T1]{fontenc}				% Encodage de caractères
+\usepackage{lmodern}				% Police vectorielle Latin Modern
+\usepackage[french]{babel}			% Règles typographiques françaises
+%\usepackage{graphicx}				% Insérer des images
+\usepackage{multicol}				% Utiliser plusieurs colonnes
+\usepackage[usenames,dvipsnames]{xcolor} 		% pour utiliser des couleurs https://en.wikibooks.org/wiki/LaTeX/Colors
+\usepackage{amssymb}				% symboles mathématiques
+
+\usepackage{geometry}
+\geometry{a4paper, landscape, top=0.7cm, bottom=0.5cm, left=1.5cm, right=1cm}
+
+\frenchbsetup{og = «, fg = »}		% remplace automatiquement les guillemets
+\frenchbsetup{ItemLabelii=\textbullet}	% redéfini le style des listes de niveau 2
+
+\usepackage{xspace}				% force l’ajout d’espaces
+
+
+% convertion à la volée de certains caractères utf-8 tapables en bépo vers leur version latex
+% (pour s’assurer que les caractères sont bien gérés par latex)
+\DeclareUnicodeCharacter{0391}{\ensuremath{\Alpha}}
+\DeclareUnicodeCharacter{03B1}{\ensuremath{\alpha}}
+\DeclareUnicodeCharacter{0392}{\ensuremath{\Beta}}
+\DeclareUnicodeCharacter{03B2}{\ensuremath{\beta}}
+\DeclareUnicodeCharacter{0393}{\ensuremath{\Gamma}}
+\DeclareUnicodeCharacter{03B3}{\ensuremath{\gamma}}
+\DeclareUnicodeCharacter{0394}{\ensuremath{\Delta}}
+\DeclareUnicodeCharacter{03B4}{\ensuremath{\delta}}
+\DeclareUnicodeCharacter{0395}{\ensuremath{\Epsilon}}
+\DeclareUnicodeCharacter{03B5}{\ensuremath{\epsilon}}
+\DeclareUnicodeCharacter{0396}{\ensuremath{\Zeta}}
+\DeclareUnicodeCharacter{03B6}{\ensuremath{\zeta}}
+\DeclareUnicodeCharacter{0397}{\ensuremath{\Eta}}
+\DeclareUnicodeCharacter{03B7}{\ensuremath{\eta}}
+\DeclareUnicodeCharacter{0398}{\ensuremath{\Theta}}
+\DeclareUnicodeCharacter{03B8}{\ensuremath{\theta}}
+\DeclareUnicodeCharacter{0399}{\ensuremath{\Iota}}
+\DeclareUnicodeCharacter{03B9}{\ensuremath{\iota}}
+\DeclareUnicodeCharacter{039A}{\ensuremath{\Kappa}}
+\DeclareUnicodeCharacter{03BA}{\ensuremath{\kappa}}
+\DeclareUnicodeCharacter{039B}{\ensuremath{\Lambda}}
+\DeclareUnicodeCharacter{03BB}{\ensuremath{\lambda}}
+\DeclareUnicodeCharacter{039C}{\ensuremath{\Mu}}
+\DeclareUnicodeCharacter{03BC}{\ensuremath{\mu}}
+\DeclareUnicodeCharacter{039D}{\ensuremath{\Nu}}
+\DeclareUnicodeCharacter{03BD}{\ensuremath{\nu}}
+\DeclareUnicodeCharacter{039E}{\ensuremath{\Xi}}
+\DeclareUnicodeCharacter{03BE}{\ensuremath{\xi}}
+\DeclareUnicodeCharacter{039F}{\ensuremath{\Omicron}}
+\DeclareUnicodeCharacter{03BF}{\ensuremath{\omicron}}
+\DeclareUnicodeCharacter{03A0}{\ensuremath{\Pi}}
+\DeclareUnicodeCharacter{03C0}{\ensuremath{\pi}}
+\DeclareUnicodeCharacter{03A1}{\ensuremath{\Rho}}
+\DeclareUnicodeCharacter{03C1}{\ensuremath{\rho}}
+\DeclareUnicodeCharacter{03A3}{\ensuremath{\Sigma}}
+\DeclareUnicodeCharacter{03C3}{\ensuremath{\sigma}}
+\DeclareUnicodeCharacter{03A4}{\ensuremath{\Tau}}
+\DeclareUnicodeCharacter{03C4}{\ensuremath{\tau}}
+\DeclareUnicodeCharacter{03A5}{\ensuremath{\Upsilon}}
+\DeclareUnicodeCharacter{03C5}{\ensuremath{\upsilon}}
+\DeclareUnicodeCharacter{03A6}{\ensuremath{\Phi}}
+\DeclareUnicodeCharacter{03C6}{\ensuremath{\varphi}}
+\DeclareUnicodeCharacter{03A7}{\ensuremath{\Chi}}
+\DeclareUnicodeCharacter{03C7}{\ensuremath{\chi}}
+\DeclareUnicodeCharacter{03A8}{\ensuremath{\Psi}}
+\DeclareUnicodeCharacter{03C8}{\ensuremath{\psi}}
+\DeclareUnicodeCharacter{03A9}{\ensuremath{\Omega}}
+\DeclareUnicodeCharacter{03C9}{\ensuremath{\omega}}
+\DeclareUnicodeCharacter{00A0}{~}
+\DeclareUnicodeCharacter{00AC}{\ensuremath{\neg}}
+\DeclareUnicodeCharacter{00B1}{\ensuremath{\pm}}
+\DeclareUnicodeCharacter{00D7}{\ensuremath{\times}}
+\DeclareUnicodeCharacter{00F7}{\ensuremath{\div}}
+\DeclareUnicodeCharacter{2026}{\ldots}
+\DeclareUnicodeCharacter{207A}{\ensuremath{^{+}}}
+\DeclareUnicodeCharacter{207B}{\ensuremath{^{-}}}
+\DeclareUnicodeCharacter{2020}{\ensuremath{\dagger}}
+\DeclareUnicodeCharacter{2021}{\ensuremath{\ddagger}}
+\DeclareUnicodeCharacter{2212}{\ensuremath{-}}
+
+
+\begin{document}
+
+% En-tête du document
+{\LARGE \textbf{\textit{Lords of Xidit}}}
+{\large - Aide de jeu - v1.0}\textit{ -- par Nicolas PENCREACH --}
+
+\setlength{\columnseprule}{0.002cm}	% épaisseur des traits de séparation de colonne
+\begin{multicols}{3}				% écrire le contenu sur 3 colonnes
+
+
+\section{But du Jeu} % (fold)
+\label{sec:but_du_jeu}
+Chaque joueur incarne un Idrakys (hérault) parcourant le pays pour lever une armée et lutter contre les familiers devenus incontrôlables.
+Le joueur ayant le mieux géré sa renommée, sa richesse et son influence restera seul dans les annales comme sauveur du royaume.
+% section but_du_jeu (end)
+
+
+\section{Mise en place} % (fold)
+\label{sec:mise_en_place}
+
+\textcolor{BlueViolet}{Pour une mise en place à 3 joueurs, suivre les instructions entre doubles crochets.}
+\begin{itemize}
+    \item Chaque joueur prend le matériel à sa couleur.
+    \item Placer le bastion dans la zone centrale.
+    \item Placer les colosses aléatoirement face caché sur leurs emplacements respectifs.
+    \item Prendre les tuiles Cité. \textcolor{BlueViolet}{[[À 3 joueurs, celles avec une couronne.]]} Aléatoirement :
+    \begin{itemize}
+        \item 5 \textcolor{BlueViolet}{[[4]]} face Recrutement (grise) sur les cités correspondantes.
+        \item 5 \textcolor{BlueViolet}{[[4]]} face Menace (blanche) sur les cités correspondantes.
+        \item 5 \textcolor{BlueViolet}{[[4]]} sur la pile Recrutement.
+        \item Le reste (6) sur la pile Menace.
+    \end{itemize}
+    \item Alimenter la prochaine Menace et prochain Recrutement avec la première tuile de chaque pile.
+    \item Placer aléatoirement les 3 tuiles de décompte. À 5 joueurs, la première tuile est marquée de 2 personnages barrés.
+    \item Choisir le premier joueur (le plus agé selon la règle).
+    \item En commençant par le premier joueur et dans le sens horaire, chacun place son Idrakys sur une cité avec ou sans tuile.\\
+            \textbf{Important :} Uniquement durant ce placement initial, 2 joueurs ne peuvent pas occuper la même cité.
+    \item \textcolor{BlueViolet}{[[Placer des marqueurs « vide » dans les zones de droite.]]}
+    \item \textcolor{BlueViolet}{[[Placer le plateau « joueur neutre » à côté du plateau. Mettre 6, 5 et 4 points sur les colonnes dont le symbole correspond à respectivement à la 1\iere{}, 2\ieme{} et 3\ieme{} tuile Décompte.]]}
+\end{itemize}
+% section mise_en_place (end)
+
+
+\section{Déroulement de la partie} % (fold)
+\label{sec:deroulement_de_la_partie}
+\begin{itemize}
+    \item La partie se déroule en 12 années (= tours).
+    \item À chaque tour :
+    \begin{itemize}
+        \item Tous les joueurs programment secrètement leurs 6 ordres.
+        \item Les programmations sont révélées.
+        \item Le 1er ordre est résolu par chaque joueur, à tour de rôle, en commençant le premier joueur.
+        \item Puis idem pour le 2nd ordre et ainsi de suite.
+        \item Le marqueur premier joueur passe au suivant dans le sens horaire.
+    \end{itemize}
+    \item À la fin des tours 4, 8 et 12, avant de changer de premier joueur on effectue un Recensement des Armées.
+    \item À la fin du 12ème tour, on procède aux décomptes de points et aux classements.
+\end{itemize}
+% section déroulement_de_la_partie (end)
+
+
+\section{Ordres} % (fold)
+\label{sec:ordres}
+Il existe 3 types d'ordres :
+\begin{itemize}
+    \item \emph{Déplacement :} l'Idrakys \textbf{doit} suivre le chemin adjacent de la couleur choisie. Sinon sans effet.\\
+    Il peut y avoir plusieurs Idrakys sur une même cité.
+    \item \emph{Action :} l'Idrakys \textbf{doit} effectuer un recrutement ou éliminer la menace s'il le peut. Sinon sans effet.\\
+    Sur une cité vide qui n'a pas eu de \textbf{menace ou colosse} éliminé dans l'\textbf{année} en cours, l'Idrakys \textbf{peux} éliminer un colosse.\\
+    \textbf{Important : Un Idrakys ne peux faire qu'une seule action par cité par année.}
+    \item \emph{Ne rien faire :} pour passer son tour.
+\end{itemize}
+
+\subsection{Recrutement} % (fold)
+\label{sub:recrutement}
+Le joueur doit prendre la première Unité disponible dans l'ordre des flèches et la place derrière son paravent.
+
+Si la tuile est épuisée, elle est placée dans la défausse et la tuile \og{}prochain recrutement\fg{} entre en jeu sur la cité correspondante et alimentée en unités.\\
+La tuile \og{}prochain recrutement\fg{} est alimentée. Si plus de stock, la défausse de menace est retournée et devient la nouvelle pile de recrutement.\\
+S'il n'est pas possible d'alimenter le prochain recrutement, on prend la tuile au sommet de la pile menace et on la retourne pour en faire le prochain recrutement.
+% subsection recrutement (end)
+
+\subsection{Éliminer une menace} % (fold)
+\label{sub:eliminer_une_menace}
+Le joueur doit fournir de derrière son paravent le nombre et type d'Unités indiqués sur le bas de la tuile menace et les replacer dans le stock commun.
+
+\subsubsection{Récompense} % (fold)
+\label{ssub:recompense}
+Il peut choisir ensuite 2 récompenses parmi les 3.
+\begin{itemize}
+    \item \emph{Étages de Guilde :} Le joueur ajoute autant d'étages à la guilde de magie qu'indiqué.\\
+    \textbf{Restrictions importantes :} Une seule guilde par cité, d'une seule couleur. 4 étages maximum.
+    \item \emph{Forains d'or :} Le joueur prend autant d'or qu'indiqué et le place derrière son paravent.
+    \item \emph{Jetons barde :} Le joueur place à sa convenance autant de jetons barde qu'indiqué dans une ou plusieurs régions adjacentes à son Idrakys. Dans la région centrale les jetons sont placés secrètement dans le fort.\\
+    \textbf{Important :} Si le joueur n'a plus de jetons en stock, il ne peux plus recevoir cette récompense.
+\end{itemize}
+% subsubsection récompense (end)
+
+\subsubsection{Réveil des Colosses} % (fold)
+\label{ssub:reveil_des_colosses}
+La tuile \og{}prochaine menace\fg{} entre en jeu sur la cité correspondante et remplacé depuis la pile menace.\\
+Si la pile est épuisée on retourne la défausse de recrutement qui devient la nouvelle pile de menace.\\
+S'il n'est pas possible d'alimenter la prochaine menace, les \textbf{Colosses s'éveillent !}
+\begin{itemize}
+    \item La première tuile de chaque pile Colosse est retournée face visible.
+    \item Retourner la défausse de menace (face recrutement).
+    \item Placer dessus la pile de recrutement.
+    \item Prendre les 2 premières tuiles de cette pile => nouvelle pile de recrutement.
+    \item Mélanger les tuiles restantes, les retourner et toutes les placer sur la pile de menace.
+\end{itemize}
+% subsubsection réveil_des_colosses (end)
+% subsection éliminer_une_menace (end)
+
+\subsection{Éliminer un colosse} % (fold)
+\label{sub:eliminer_un_colosse}
+Le fonctionnement est simlaire à l'élimination d'une menace à la diférence que le joueur peut utiliser n'importe quel type d'unité.
+
+Le Colosse éliminé est remis dans la boîte, \textbf{le colosse dessous n'est pas retourné}.
+% subsection éliminer_un_colosse (end)
+% section actions (end)
+
+
+\section{Recensement des Armées} % (fold)
+\label{sec:recensement_des_armees}
+Lors de cette phase, les joueurs vont comparer leur unités pour gagner des avantages.
+\begin{itemize}
+    \item Chacun prend secrêtement dans sa main de derrière son paravent autant de paysan (unité orange) qu'il le souhaite.
+    \item Chacun révèle en même temps sa main.
+    \item Le joueur ayant révélé le plus d'unités reçoit la récompense.
+    \item En cas d'égalité, chacun reçoit une récompense (au lieu de 2 dans certains cas).
+    \item Si aucun ne révèle d'unité, aucune récompense n'est attibuée.
+    \item L'étage de guilde doit être placé dès que possible sur une guilde et conserver derrière le paravent en attendant.
+    \item Pour le placement des jetons barde, les joueurs à égalité les posent en respectant l'ordre de jeu.
+    \item Répéter le processus pour chaque type d'unité.
+\end{itemize}
+% section recensement_des_armées (end)
+
+
+\section{Décompte des points et Classement} % (fold)
+\label{sec:decompte_des_points_et_classement}
+À la fin du 12ème tour, après le dernier recensement, pour chacune des 3 colonnes de classement on procède au décompte
+des points avec un classement immédiat donnant lieu à une élimination. À la fin des 3 décompte/classement, le joueur
+non éliminé le mieux classé remporte la partie.
+\begin{itemize}
+    \item Richesse : Les joueurs sont classés suivant la quantité d'or possédée.
+    \item Influence : Les joueurs sont classés suivant le nombre d'étages de guildes placées sur le plateau.
+    Les étages restés derrière le paravent ne comptent pas.
+    \item Renommée : Les joueurs marquent des points pour chaque région où ils sont en première ou seconde position en nombre de jeton bardes.\\
+    En cas d'égalité en première place, chacun gagne le nombre de points associé et il n'y a pas de deuxième place.\\
+    En cas d'égalité pour la seconde place, chacun gagne le nombre de points associé.
+\end{itemize}
+
+
+En cas d'égalité lors du classement, les joueurs sont départagés par leur nb d'unités.\\
+Si l'égalité persiste, le joueur le plus loin du premier joueur est le vainqueur de l'égalité.
+
+Le joueur le moins bien classé est éliminé. On retourne son pion et il sera retourné sur les prochains classements.\\
+À 5 joueurs, lors du premier classement les 2 derniers sont éliminés.
+% section décompte_des_points_et_classement (end)
+
+\section{Variantes} % (fold)
+\label{sec:variantes}
+
+\subsection{Version courte en 9 années de jeu} % (fold)
+\label{sub:version_courte_9_annees}
+Pour une partie plus rapide en 9 années quelques adaptations sont nécessaires.\\
+\begin{itemize}
+	\item Placer les tuiles Calendrier sur le Calendrier du Plateau de jeu de façon à limiter à 9 années.
+	\item Le Recensement des armées à lieu à la fin des 3\ieme{}, 6\ieme{} et 9\ieme{} année de jeu.
+	\item À 5 joueurs, retirer les tuiles Cité 20 et 21 et placer un marqueur de vide sur la région 2.
+	\item À 4 joueurs, retirer les tuiles Cité 19, 20 et 21 et placer un marqueur de vide sur les régions 1 et 2.
+	\item À 3 joueurs, retirer les tuiles Cité 14 et 18 et placer un marqueur de vide sur les régions 1 et 2.
+\end{itemize}
+
+\subsection{Pour 3 joueurs} % (fold)
+\label{sub:regles_3_joueurs}
+À 3 joueurs, la mise en place est légèrement différente (cf. le chapitre mise en place) et introduit un joueur neutre possédant un score initial dans les 3 catégories.\\
+À chaque fois qu’un joueur élimine une menace, il doit avancer un des marqueurs de score du joueur neutre.\\
+Lors du décompte de points, le joueur neutre peut ainsi éliminer un autre joueur. En cas d’égalité, le neutre est éliminé.
+
+Pour augmenter la difficulté vous pouvez donner 7, 6 et 5 points au joueur neutre au départ.
+% section variantes (end)
+
+% ### Fin du document ###
+\end{multicols}
+\end{document}
